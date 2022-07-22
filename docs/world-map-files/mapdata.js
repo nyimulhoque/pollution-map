@@ -246,7 +246,8 @@ var simplemaps_usmap_mapdata={
     "0": {
       name: "Atlanta (Cop City)",
       lat: "33.7490",
-      lng: "-84.3880"
+      lng: "-84.3880",
+      description: "Insert description here or a hyperlink to more info (i.e. the fact sheet)"
     }
   },
   labels: {
