@@ -1,29 +1,28 @@
-var simplemaps_worldmap_mapdata={
+var simplemaps_usmap_mapdata={
   main_settings: {
-    //General settings
-    width: "700", //or 'responsive'
+   //General settings
+    width: "responsive", //'700' or 'responsive'
     background_color: "#FFFFFF",
     background_transparent: "yes",
+    border_color: "#ffffff",
     popups: "detect",
     
     //State defaults
-    state_description: "",
-    state_color: "#161616",
-    state_hover_color: "#3B729F",
+    state_description: "State Description",
+    state_color: "#428ac7",
+    state_hover_color: "#2c5271",
     state_url: "",
     border_size: 1.5,
-    border_color: "#ffffff",
     all_states_inactive: "no",
-    all_states_zoomable: "no",
-    
-    //Location defaults
-    location_description: "Location description",
-    location_color: "#161616",
+    all_states_zoomable: "yes",
+    location_description: "",
+    location_color: "#166f56",
     location_opacity: 0.8,
     location_hover_opacity: 1,
     location_url: "",
     location_size: 25,
     location_type: "square",
+    location_image_source: "frog.png",
     location_border_color: "#FFFFFF",
     location_border: 2,
     location_hover_border: 2.5,
@@ -31,19 +30,14 @@ var simplemaps_worldmap_mapdata={
     all_locations_hidden: "no",
     
     //Label defaults
-    label_color: "#ffffff",
-    label_hover_color: "#ffffff",
+    label_color: "#d5ddec",
+    label_hover_color: "#d5ddec",
     label_size: 22,
     label_font: "Arial",
     hide_labels: "no",
-   
-    //Zoom settings
+    hide_eastern_labels: "no",
     manual_zoom: "no",
     back_image: "no",
-    arrow_box: "no",
-    navigation_size: "40",
-    navigation_color: "#f7f7f7",
-    navigation_border_color: "#636363",
     initial_back: "no",
     initial_zoom: -1,
     initial_zoom_solo: "no",
@@ -64,1756 +58,509 @@ var simplemaps_worldmap_mapdata={
     //Advanced settings
     div: "map",
     auto_load: "yes",
-    rotate: "0",
     url_new_tab: "yes",
-    images_directory: "default",
-    import_labels: "no",
+    images_directory: "/static/lib/simplemaps/map_images/",
     fade_time: 0.1,
-    link_text: "View Website"
+    import_labels: "no",
+    link_text: "View Website",
+    state_image_url: "",
+    state_image_position: "",
+    location_image_url: ""
   },
   state_specific: {
-    AF: {
-      name: "Afghanistan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    HI: {
+      name: "Hawaii"
     },
-    AO: {
-      name: "Angola",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    AK: {
+      name: "Alaska"
     },
-    AL: {
-      name: "Albania",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    FL: {
+      name: "Florida"
     },
-    AE: {
-      name: "United Arab Emirates",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    NH: {
+      name: "New Hampshire"
     },
-    AR: {
-      name: "Argentina",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AM: {
-      name: "Armenia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AU: {
-      name: "Australia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AT: {
-      name: "Austria",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AZ: {
-      name: "Azerbaijan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BI: {
-      name: "Burundi",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BE: {
-      name: "Belgium",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BJ: {
-      name: "Benin",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BF: {
-      name: "Burkina Faso",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BD: {
-      name: "Bangladesh",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BG: {
-      name: "Bulgaria",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BH: {
-      name: "Bahrain",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BA: {
-      name: "Bosnia and Herzegovina",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BY: {
-      name: "Belarus",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BZ: {
-      name: "Belize",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BO: {
-      name: "Bolivia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BR: {
-      name: "Brazil",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BN: {
-      name: "Brunei Darussalam",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BT: {
-      name: "Bhutan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BW: {
-      name: "Botswana",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CF: {
-      name: "Central African Republic",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CA: {
-      name: "Canada",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CH: {
-      name: "Switzerland",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CL: {
-      name: "Chile",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CN: {
-      name: "China",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CI: {
-      name: "Côte d'Ivoire",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CM: {
-      name: "Cameroon",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CD: {
-      name: "Democratic Republic of the Congo",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CG: {
-      name: "Republic of Congo",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CO: {
-      name: "Colombia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CR: {
-      name: "Costa Rica",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CU: {
-      name: "Cuba",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CZ: {
-      name: "Czech Republic",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    DE: {
-      name: "Germany",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    DJ: {
-      name: "Djibouti",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    DK: {
-      name: "Denmark",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    DO: {
-      name: "Dominican Republic",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    DZ: {
-      name: "Algeria",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    EC: {
-      name: "Ecuador",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    EG: {
-      name: "Egypt",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ER: {
-      name: "Eritrea",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    EE: {
-      name: "Estonia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ET: {
-      name: "Ethiopia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    FI: {
-      name: "Finland",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    FJ: {
-      name: "Fiji",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GA: {
-      name: "Gabon",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GB: {
-      name: "United Kingdom",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GE: {
-      name: "Georgia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GH: {
-      name: "Ghana",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GN: {
-      name: "Guinea",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GM: {
-      name: "The Gambia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GW: {
-      name: "Guinea-Bissau",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GQ: {
-      name: "Equatorial Guinea",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GR: {
-      name: "Greece",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GL: {
-      name: "Greenland",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GT: {
-      name: "Guatemala",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GY: {
-      name: "Guyana",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    HN: {
-      name: "Honduras",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    HR: {
-      name: "Croatia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    HT: {
-      name: "Haiti",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    HU: {
-      name: "Hungary",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ID: {
-      name: "Indonesia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IN: {
-      name: "India",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IE: {
-      name: "Ireland",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IR: {
-      name: "Iran",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IQ: {
-      name: "Iraq",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IS: {
-      name: "Iceland",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IL: {
-      name: "Israel",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IT: {
-      name: "Italy",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    JM: {
-      name: "Jamaica",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    JO: {
-      name: "Jordan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    JP: {
-      name: "Japan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KZ: {
-      name: "Kazakhstan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KE: {
-      name: "Kenya",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KG: {
-      name: "Kyrgyzstan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KH: {
-      name: "Cambodia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KR: {
-      name: "Republic of Korea",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    XK: {
-      name: "Kosovo",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KW: {
-      name: "Kuwait",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LA: {
-      name: "Lao PDR",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LB: {
-      name: "Lebanon",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LR: {
-      name: "Liberia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LY: {
-      name: "Libya",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LK: {
-      name: "Sri Lanka",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LS: {
-      name: "Lesotho",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LT: {
-      name: "Lithuania",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LU: {
-      name: "Luxembourg",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LV: {
-      name: "Latvia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MA: {
-      name: "Morocco",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MD: {
-      name: "Moldova",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MG: {
-      name: "Madagascar",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MX: {
-      name: "Mexico",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MK: {
-      name: "Macedonia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ML: {
-      name: "Mali",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MM: {
-      name: "Myanmar",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    VT: {
+      name: "Vermont"
     },
     ME: {
-      name: "Montenegro",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+      name: "Maine"
     },
-    MN: {
-      name: "Mongolia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    RI: {
+      name: "Rhode Island"
     },
-    MZ: {
-      name: "Mozambique",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MR: {
-      name: "Mauritania",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MW: {
-      name: "Malawi",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MY: {
-      name: "Malaysia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NA: {
-      name: "Namibia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NE: {
-      name: "Niger",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NG: {
-      name: "Nigeria",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NI: {
-      name: "Nicaragua",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NL: {
-      name: "Netherlands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NO: {
-      name: "Norway",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NP: {
-      name: "Nepal",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    NZ: {
-      name: "New Zealand",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    OM: {
-      name: "Oman",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    PK: {
-      name: "Pakistan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    NY: {
+      name: "New York"
     },
     PA: {
-      name: "Panama",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+      name: "Pennsylvania"
     },
-    PE: {
-      name: "Peru",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    NJ: {
+      name: "New Jersey"
     },
-    PH: {
-      name: "Philippines",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    DE: {
+      name: "Delaware"
     },
-    PG: {
-      name: "Papua New Guinea",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    MD: {
+      name: "Maryland"
     },
-    PL: {
-      name: "Poland",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    VA: {
+      name: "Virginia"
     },
-    KP: {
-      name: "Dem. Rep. Korea",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    WV: {
+      name: "West Virginia"
     },
-    PT: {
-      name: "Portugal",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    OH: {
+      name: "Ohio"
     },
-    PY: {
-      name: "Paraguay",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    IN: {
+      name: "Indiana"
     },
-    PS: {
-      name: "Palestine",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    IL: {
+      name: "Illinois"
     },
-    QA: {
-      name: "Qatar",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    CT: {
+      name: "Connecticut"
     },
-    RO: {
-      name: "Romania",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    RU: {
-      name: "Russia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    RW: {
-      name: "Rwanda",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    EH: {
-      name: "Western Sahara",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SA: {
-      name: "Saudi Arabia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SD: {
-      name: "Sudan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SS: {
-      name: "South Sudan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SN: {
-      name: "Senegal",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SL: {
-      name: "Sierra Leone",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SV: {
-      name: "El Salvador",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    RS: {
-      name: "Serbia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SR: {
-      name: "Suriname",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SK: {
-      name: "Slovakia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SI: {
-      name: "Slovenia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SE: {
-      name: "Sweden",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SZ: {
-      name: "Swaziland",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SY: {
-      name: "Syria",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TD: {
-      name: "Chad",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TG: {
-      name: "Togo",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TH: {
-      name: "Thailand",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TJ: {
-      name: "Tajikistan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TM: {
-      name: "Turkmenistan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TL: {
-      name: "Timor-Leste",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TN: {
-      name: "Tunisia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TR: {
-      name: "Turkey",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TW: {
-      name: "Taiwan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TZ: {
-      name: "Tanzania",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    UG: {
-      name: "Uganda",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    UA: {
-      name: "Ukraine",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    UY: {
-      name: "Uruguay",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    US: {
-      name: "United States",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    UZ: {
-      name: "Uzbekistan",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    VE: {
-      name: "Venezuela",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    VN: {
-      name: "Vietnam",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    VU: {
-      name: "Vanuatu",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    YE: {
-      name: "Yemen",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ZA: {
-      name: "South Africa",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ZM: {
-      name: "Zambia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ZW: {
-      name: "Zimbabwe",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SO: {
-      name: "Somalia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GF: {
-      name: "France",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    FR: {
-      name: "France",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ES: {
-      name: "Spain",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AW: {
-      name: "Aruba",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AI: {
-      name: "Anguilla",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AD: {
-      name: "Andorra",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    AG: {
-      name: "Antigua and Barbuda",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BS: {
-      name: "Bahamas",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BM: {
-      name: "Bermuda",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    BB: {
-      name: "Barbados",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KM: {
-      name: "Comoros",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CV: {
-      name: "Cape Verde",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KY: {
-      name: "Cayman Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    DM: {
-      name: "Dominica",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    FK: {
-      name: "Falkland Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    FO: {
-      name: "Faeroe Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GD: {
-      name: "Grenada",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    HK: {
-      name: "Hong Kong",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    KN: {
-      name: "Saint Kitts and Nevis",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LC: {
-      name: "Saint Lucia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    LI: {
-      name: "Liechtenstein",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MF: {
-      name: "Saint Martin (French)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MV: {
-      name: "Maldives",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MT: {
-      name: "Malta",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MS: {
-      name: "Montserrat",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MU: {
-      name: "Mauritius",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    WI: {
+      name: "Wisconsin"
     },
     NC: {
-      name: "New Caledonia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+      name: "North Carolina"
     },
-    NR: {
-      name: "Nauru",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    DC: {
+      name: "District of Columbia"
     },
-    PN: {
-      name: "Pitcairn Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    MA: {
+      name: "Massachusetts"
+    },
+    TN: {
+      name: "Tennessee"
+    },
+    AR: {
+      name: "Arkansas"
+    },
+    MO: {
+      name: "Missouri"
+    },
+    GA: {
+      name: "Georgia"
+    },
+    SC: {
+      name: "South Carolina"
+    },
+    KY: {
+      name: "Kentucky"
+    },
+    AL: {
+      name: "Alabama"
+    },
+    LA: {
+      name: "Louisiana"
+    },
+    MS: {
+      name: "Mississippi"
+    },
+    IA: {
+      name: "Iowa"
+    },
+    MN: {
+      name: "Minnesota"
+    },
+    OK: {
+      name: "Oklahoma"
+    },
+    TX: {
+      name: "Texas"
+    },
+    NM: {
+      name: "New Mexico"
+    },
+    KS: {
+      name: "Kansas"
+    },
+    NE: {
+      name: "Nebraska"
+    },
+    SD: {
+      name: "South Dakota"
+    },
+    ND: {
+      name: "North Dakota"
+    },
+    WY: {
+      name: "Wyoming"
+    },
+    MT: {
+      name: "Montana"
+    },
+    CO: {
+      name: "Colorado"
+    },
+    UT: {
+      name: "Utah"
+    },
+    AZ: {
+      name: "Arizona"
+    },
+    NV: {
+      name: "Nevada"
+    },
+    OR: {
+      name: "Oregon"
+    },
+    WA: {
+      name: "Washington"
+    },
+    CA: {
+      name: "California"
+    },
+    MI: {
+      name: "Michigan"
+    },
+    ID: {
+      name: "Idaho"
+    },
+    GU: {
+      name: "Guam",
+      hide: "yes"
+    },
+    VI: {
+      name: "Virgin Islands",
+      hide: "yes"
     },
     PR: {
       name: "Puerto Rico",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+      hide: "yes"
     },
-    PF: {
-      name: "French Polynesia",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    MP: {
+      name: "Northern Mariana Islands",
+      hide: "yes"
     },
-    SG: {
-      name: "Singapore",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SB: {
-      name: "Solomon Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    ST: {
-      name: "São Tomé and Principe",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SX: {
-      name: "Saint Martin (Dutch)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    SC: {
-      name: "Seychelles",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TC: {
-      name: "Turks and Caicos Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TO: {
-      name: "Tonga",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    TT: {
-      name: "Trinidad and Tobago",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    VC: {
-      name: "Saint Vincent and the Grenadines",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    VG: {
-      name: "British Virgin Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    VI: {
-      name: "United States Virgin Islands",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CY: {
-      name: "Cyprus",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    RE: {
-      name: "Reunion (France)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    YT: {
-      name: "Mayotte (France)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    MQ: {
-      name: "Martinique (France)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    GP: {
-      name: "Guadeloupe (France)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    CW: {
-      name: "Curaco (Netherlands)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
-    },
-    IC: {
-      name: "Canary Islands (Spain)",
-      description: "default",
-      color: "default",
-      hover_color: "default",
-      url: "default"
+    AS: {
+      name: "American Samoa",
+      hide: "yes"
     }
   },
   locations: {
     "0": {
-      name: "New York",
-      lat: "40.71",
-      lng: "-74.0059731",
-      description: "New York",
-      color: "default",
-      url: "default",
-      size: "default"
+      name: "Atlanta (Cop City)",
+      lat: "33.7490",
+      lng: "-84.3880"
     }
   },
-  labels: {},
-  regions: {
-    "0": {
-      name: "Highest Trilemma Scores",
-      states: [
-        "AR",
-        "AU",
-        "AT",
-        "AZ",
-        "BB",
-        "BE",
-        "BR",
-        "BN",
-        "BG",
-        "CA",
-        "CL",
-        "CO",
-        "CR",
-        "HR",
-        "CZ",
-        "DK",
-        "EC",
-        "EE",
-        "FI",
-        "FR",
-        "DE",
-        "GR",
-        "HU",
-        "IS",
-        "IR",
-        "IE",
-        "IT",
-        "JP",
-        "KZ",
-        "KR",
-        "KW",
-        "LV",
-        "LT",
-        "LU",
-        "MY",
-        "MX",
-        "NL",
-        "NZ",
-        "NO",
-        "OM",
-        "PY",
-        "PE",
-        "PL",
-        "PT",
-        "QA",
-        "RO",
-        "RU",
-        "SK",
-        "SI",
-        "ES",
-        "SE",
-        "CH",
-        "TR",
-        "AE",
-        "GB",
-        "US",
-        "UY",
-        "VE"
-      ],
-      color: "#cd4242"
+  labels: {
+    NH: {
+      parent_id: "NH",
+      x: "932",
+      y: "183",
+      pill: "yes",
+      width: 45,
+      display: "all"
     },
-    "1": {
-      name: "Middle Trilemma Scores",
-      states: [
-        "AL",
-        "DZ",
-        "AO",
-        "AM",
-        "BH",
-        "BO",
-        "BA",
-        "BW",
-        "CN",
-        "CY",
-        "DO",
-        "EG",
-        "SV",//Eswatini missing
-        "GA",
-        "GE",
-        "GT",
-        "HN",
-        "HK",
-        "IN",
-        "ID",
-        "IQ",
-        "IL",
-        "JM",
-        "JO",
-        "LB",
-        "MT",
-        "MU",
-        "MD",
-        "MN",
-        "ME",
-        "MA",
-        "NA",
-        "NI",
-        "MK",
-        "PA",
-        "PH",
-        "SA",
-        "RS",
-        "SG",
-        "ZA",
-        "LK",
-        "TJ",
-        "TH",
-        "TT",
-        "TN",
-        "UA",
-        "VN"
-      ],
-      color: "#308f36"
+    VT: {
+      parent_id: "VT",
+      x: "883",
+      y: "243",
+      pill: "yes",
+      width: 45,
+      display: "all"
     },
-    "2": {
-      name: "Lowest Trilemma Scores",
-      states: [
-        "BD",
-        "BJ",
-        "KH",
-        "CM",
-        "CD",
-        "CI",
-        "ET",
-        "GH",
-        "KE",
-        "MG",
-        "MW",
-        "MR",
-        "MZ",
-        "MM",
-        "NP",
-        "NE",
-        "NG",
-        "PK",
-        "SN",
-        "TZ",
-        "ZM",
-        "ZW"
-      ],
-      color: "#b719a5"
+    RI: {
+      parent_id: "RI",
+      x: "932",
+      y: "273",
+      pill: "yes",
+      width: 45,
+      display: "all"
     },
-    "3": {
-      name: "No data for this country",
-      states: [
-        "AF",
-        "BI",
-        "BF",
-        "BY",
-        "BZ",
-        "BT",
-        "CF",
-        "CG",
-        "CU",
-        "DJ",
-        "ER",
-        "FI",
-        "GN",
-        "GM",
-        "GW",
-        "GQ",
-        "GL",
-        "GY",
-        "HT",
-        "KG",
-        "XK",
-        "LA",
-        "LR",
-        "LY",
-        "LS",
-        "MK",
-        "ML",
-        "KP",
-        "PG",
-        "PS",
-        "RW",
-        "EH",
-        "SD",
-        "SS",
-        "SL",
-        "SR",
-        "SZ",
-        "SY",
-        "TD",
-        "TG",
-        "TM",
-        "TL",
-        "TW",
-        "UG",
-        "UZ",
-        "VU",
-        "YE",
-        "SO",
-        "AW",
-        "AI",
-        "AD",
-        "AG",
-        "BS",
-        "BM",
-        "KM",
-        "CV",
-        "KY",
-        "DM",
-        "FK",
-        "FO",
-        "GD",
-        "KN",
-        "LC",
-        "LI",
-        "MF",
-        "MV",
-        "NC",
-        "NR",
-        "PN",
-        "PR",
-        "PF",
-        "SB",
-        "ST",
-        "SX",
-        "SC",
-        "TC",
-        "TO",
-        "VC",
-        "VG",
-        "VI"
-      ],
-      color: "#dedede"
+    NJ: {
+      parent_id: "NJ",
+      x: "883",
+      y: "273",
+      pill: "yes",
+      width: 45,
+      display: "all"
+    },
+    DE: {
+      parent_id: "DE",
+      x: "883",
+      y: "303",
+      pill: "yes",
+      width: 45,
+      display: "all"
+    },
+    MD: {
+      parent_id: "MD",
+      x: "932",
+      y: "303",
+      pill: "yes",
+      width: 45,
+      display: "all"
+    },
+    DC: {
+      parent_id: "DC",
+      x: "884",
+      y: "332",
+      pill: "yes",
+      width: 45,
+      display: "all"
+    },
+    MA: {
+      parent_id: "MA",
+      x: "932",
+      y: "213",
+      pill: "yes",
+      width: 45,
+      display: "all"
+    },
+    CT: {
+      parent_id: "CT",
+      x: "932",
+      y: "243",
+      pill: "yes",
+      width: 45,
+      display: "all"
+    },
+    HI: {
+      parent_id: "HI",
+      x: 305,
+      y: 565,
+      pill: "yes"
+    },
+    AK: {
+      parent_id: "AK",
+      x: "113",
+      y: "495"
+    },
+    FL: {
+      parent_id: "FL",
+      x: "773",
+      y: "510"
+    },
+    ME: {
+      parent_id: "ME",
+      x: "893",
+      y: "85"
+    },
+    NY: {
+      parent_id: "NY",
+      x: "815",
+      y: "158"
+    },
+    PA: {
+      parent_id: "PA",
+      x: "786",
+      y: "210"
+    },
+    VA: {
+      parent_id: "VA",
+      x: "790",
+      y: "282"
+    },
+    WV: {
+      parent_id: "WV",
+      x: "744",
+      y: "270"
+    },
+    OH: {
+      parent_id: "OH",
+      x: "700",
+      y: "240"
+    },
+    IN: {
+      parent_id: "IN",
+      x: "650",
+      y: "250"
+    },
+    IL: {
+      parent_id: "IL",
+      x: "600",
+      y: "250"
+    },
+    WI: {
+      parent_id: "WI",
+      x: "575",
+      y: "155"
+    },
+    NC: {
+      parent_id: "NC",
+      x: "784",
+      y: "326"
+    },
+    TN: {
+      parent_id: "TN",
+      x: "655",
+      y: "340"
+    },
+    AR: {
+      parent_id: "AR",
+      x: "548",
+      y: "368"
+    },
+    MO: {
+      parent_id: "MO",
+      x: "548",
+      y: "293"
+    },
+    GA: {
+      parent_id: "GA",
+      x: "718",
+      y: "405"
+    },
+    SC: {
+      parent_id: "SC",
+      x: "760",
+      y: "371"
+    },
+    KY: {
+      parent_id: "KY",
+      x: "680",
+      y: "300"
+    },
+    AL: {
+      parent_id: "AL",
+      x: "655",
+      y: "405"
+    },
+    LA: {
+      parent_id: "LA",
+      x: "550",
+      y: "435"
+    },
+    MS: {
+      parent_id: "MS",
+      x: "600",
+      y: "405"
+    },
+    IA: {
+      parent_id: "IA",
+      x: "525",
+      y: "210"
+    },
+    MN: {
+      parent_id: "MN",
+      x: "506",
+      y: "124"
+    },
+    OK: {
+      parent_id: "OK",
+      x: "460",
+      y: "360"
+    },
+    TX: {
+      parent_id: "TX",
+      x: "425",
+      y: "435"
+    },
+    NM: {
+      parent_id: "NM",
+      x: "305",
+      y: "365"
+    },
+    KS: {
+      parent_id: "KS",
+      x: "445",
+      y: "290"
+    },
+    NE: {
+      parent_id: "NE",
+      x: "420",
+      y: "225"
+    },
+    SD: {
+      parent_id: "SD",
+      x: "413",
+      y: "160"
+    },
+    ND: {
+      parent_id: "ND",
+      x: "416",
+      y: "96"
+    },
+    WY: {
+      parent_id: "WY",
+      x: "300",
+      y: "180"
+    },
+    MT: {
+      parent_id: "MT",
+      x: "280",
+      y: "95"
+    },
+    CO: {
+      parent_id: "CO",
+      x: "320",
+      y: "275"
+    },
+    UT: {
+      parent_id: "UT",
+      x: "223",
+      y: "260"
+    },
+    AZ: {
+      parent_id: "AZ",
+      x: "205",
+      y: "360"
+    },
+    NV: {
+      parent_id: "NV",
+      x: "140",
+      y: "235"
+    },
+    OR: {
+      parent_id: "OR",
+      x: "100",
+      y: "120"
+    },
+    WA: {
+      parent_id: "WA",
+      x: "130",
+      y: "55"
+    },
+    ID: {
+      parent_id: "ID",
+      x: "200",
+      y: "150"
+    },
+    CA: {
+      parent_id: "CA",
+      x: "79",
+      y: "285"
+    },
+    MI: {
+      parent_id: "MI",
+      x: "663",
+      y: "185"
+    },
+    PR: {
+      parent_id: "PR",
+      x: "620",
+      y: "545"
+    },
+    GU: {
+      parent_id: "GU",
+      x: "550",
+      y: "540"
+    },
+    VI: {
+      parent_id: "VI",
+      x: "680",
+      y: "519"
+    },
+    MP: {
+      parent_id: "MP",
+      x: "570",
+      y: "575"
+    },
+    AS: {
+      parent_id: "AS",
+      x: "665",
+      y: "580"
     }
-  }
+  },
+  legend: {
+    entries: []
+  },
+  regions: {}
 };
