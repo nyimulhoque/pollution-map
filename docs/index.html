@@ -46,151 +46,6 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-    <! --
-        var pics = [
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForAlbania.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForAlgeria.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForAngola.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForArgentina.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForArmenia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForAustralia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForAustria.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForAzerbaijan.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBahrain.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBangladesh.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBarbados.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBelgium.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBenin.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBolivia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBosnia%20and%20Herzegovina.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBotswana.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBrazil.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBrunei.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForBulgaria.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCambodia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCameroon.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCanada.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForChile.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForChina.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForColombia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCongo.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCosta%20Rica.pngC',
-            "https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCote%20d'Ivoire.png",
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCroatia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCyprus.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForCzech%20Republic.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForDenmark.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForDominican%20Republic.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForEcuador.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForEgypt.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForEl%20Salvador.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForEstonia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForEswatini.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForEthiopia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForFinland.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForFrance.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForGabon.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForGeorgia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForGermany.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForGhana.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForGreece.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForGuatemala.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForHonduras.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForHong%20Kong.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForHungary.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForIceland.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForIndia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForIndonesia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForIran.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForIraq.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForIreland.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForIsrael.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForItaly.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForJamaica.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForJapan.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForJordan.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForKazakhstan.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForKenya.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForKorea.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForKuwait.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForLatvia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForLebanon.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForLithuania.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForLuxembourg.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMadagascar.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMalawi.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMalaysia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMalta.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMauritania.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMauritius.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMexico.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMoldova.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMongolia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMontenegro.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMorocco.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMozambique.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForMyanmar.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNamibia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNepal.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNetherlands.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNew%20Zealand.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNicaragua.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNiger.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNigeria.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNorth%20Macedonia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForNorway.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForOman.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForPakistan.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForPanama.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForParaguay.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForPeru.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForPhilippines.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForPoland.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForPortugal.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForQatar.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForRomania.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForRussia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSaudi%20Arabia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSenegal.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSerbia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSingapore.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSlovakia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSlovenia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSouth%20Africa.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSpain.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSri%20Lanka.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSweden.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForSwitzerland.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForTajikistan.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForTanzania.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForThailand.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForTrinidad%20and%20Tobago.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForTunisia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForTurkey.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForUkraine.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForUnited%20Arab%20Emirates.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForUnited%20Kingdom.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForUnited%20States.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForUruguay.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForVenezuela.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForVietnam.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForZambia.png',
-            'https://raw.githubusercontent.com/nyimulhoque/ML-climate-change-analysis/master/docs/pics/graphForZimbabwe.png'
-        ]
-        -->
-
-
-
-        $('#picDD').change(function () {
-        var val = parseInt($('#picDD').val());
-        $("#graph").attr("src",pics[val]);
-        });
-
-        });
-        
-    </script>
 
 <body>
     <!--
@@ -207,11 +62,11 @@
         <h3 style="text-align: center;font-family:verdana;">Team Members: Maurice Firpo, Nyimul Hoque, Andrea Wortham</h3>
     </br>
 
-    <h2 style="font-family:verdana;">Results</h2>
-    <p style="font-size: 20px;font-family:verdana;">Use your mouse below to interact with our map.</p>
-    
+    <h2 style="font-family:verdana;">Interactive Map with Pollution by Location in the U.S.A.</h2>
+    <p style="font-size: 20px;font-family:verdana;">Use your mouse below to interact with our map. Clicking on a state zooms in while
+    hovering over a green square provides more information about that pollution location.</p>
+
     <!-- MAP BELOW WHOOOOO-->
-    <p style="font-size: 20px;font-family:verdana;">Interactive Map with Pollution by Location in the U.S.A.</p>
     <script src="world-map-files/mapdata.js"></script>
     <script src="world-map-files/usmap.js"></script>
     <div id="centerMap">
@@ -219,8 +74,8 @@
     </div>
        
     
-    <h2 style="font-family:verdana;">Want to add something to our map?</h2>
-    <p style="font-size: 20px;font-family:verdana;">Insert Text Here</p> 
+    <h2 style="font-family:verdana;">Want to add a location to our map?</h2>
+    <p style="font-size: 20px;font-family:verdana;">Please email nhoque3@gatech.edu with some information about the location you'd like for us to add!</p> 
 
     </div>
 </body>

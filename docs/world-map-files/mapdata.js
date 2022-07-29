@@ -8,7 +8,7 @@ var simplemaps_usmap_mapdata={
     popups: "detect",
     
     //State defaults
-    state_description: "State Description",
+    state_description: "",
     state_color: "#428ac7",
     state_hover_color: "#2c5271",
     state_url: "",
@@ -244,10 +244,10 @@ var simplemaps_usmap_mapdata={
   },
   locations: {
     "0": {
-      name: "Atlanta (Cop City)",
+      name: "Atlanta (East Point)",
       lat: "33.7490",
       lng: "-84.3880",
-      description: "Insert description here or a hyperlink to more info (i.e. the fact sheet)"
+      description: "PPG industries releases chemicals through air stacks. Below are the chemicals found in the area. <br /><br /> Chemical, CARCINOGENIC?, Pounds in air <br /> 1,2,4-Trimethylbenzene, NO, 142 <br /> Barium compounds, NO, 938 <br /> Certain glycol ethers, NO, 2228 <br /> Ethylbenzene, YES, 1268 <br /> Ethylene glycol, NO, 142 <br /> Methyl isobutyl ketone, YES, 93 <br /> Toluene, NO, 542 <br /> Xylene (mixed isomers), NO, 3840 <br /> Zinc compounds, NO, 33"
     }
   },
   labels: {
